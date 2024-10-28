@@ -12,10 +12,12 @@ a. Mostrar por pantalla el contenido de la cadena pasada a mayúsculas y minúsc
      */
 
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
         
+        String cadena = new String();
         System.out.println("Introduce texto que con el que quieras trabajar: ");
-        String cadena = "Se mostraran las letras en Mayuscula o en Minusculas";
-        System.out.println(cadena);
+        cadena = teclado.nextLine();
+        System.out.println("Tu frase elegida es: " + cadena);
         
         String cadenaM = cadena.toUpperCase();
         String cadenam = cadena.toLowerCase();
