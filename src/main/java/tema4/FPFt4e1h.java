@@ -18,9 +18,16 @@ es un número, esto es, contiene solo dígitos decimales (del 0 a 9).
         System.out.println("Introduce texto que con el que quieras trabajar: ");
         cadena = teclado.nextLine();
         System.out.println("Tu frase elegida es: " + cadena);
+        if (esNumerico(cadena)) {
+            int numero = Integer.parseInt(cadena);
+            System.out.println("Numero resultante: " + numero);
+        } else {
+            System.out.println("Error, no es un numero valido");
+        }
+    }
 
-        int numero = Integer.parseInt(cadena);
-        System.out.println("Numero resultante: " + numero);
+    public static boolean esNumerico(String cadena) {
+        return cadena.matches("\\d+");
 
     }
 }

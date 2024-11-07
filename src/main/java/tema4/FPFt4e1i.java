@@ -14,7 +14,9 @@ public class FPFt4e1i {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        String cadenaHex = "1A3F"; // Ejemplo de cadena hexadecimal
+        String cadenaHex = new String(); // Ejemplo de cadena hexadecimal
+        System.out.println("Escribe tu numero exadecimal: ");
+        cadenaHex = teclado.nextLine();
         int numeroDecimal = Integer.parseInt(cadenaHex, 16);
 
         System.out.println("El número decimal es: " + numeroDecimal);
