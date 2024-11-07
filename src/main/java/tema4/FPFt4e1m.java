@@ -12,17 +12,19 @@ public class FPFt4e1m {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        int contador = 0;
         String cadena = new String(); // Ejemplo de cadena hexadecimal
         System.out.println("Escribe tu frase: ");
         cadena = teclado.nextLine();
 
-        for (int i = 0; i < cadena.length(); i++) {
-            if (Character.isDigit(cadena.charAt(i))) {
-                contador++;
-            }
+        String cadenaLimpia = cadena.replaceAll("\\s+", "").toLowerCase();
+
+        String cadenaInverida = new StringBuilder(cadenaLimpia).reverse().toString();
+
+        if (cadenaLimpia.equals(cadenaInverida)) {
+            System.out.println("La cadena ES un PALINDROMO");
+        } else {
+            System.out.println("La cadena NO es un PALINDROMO");
         }
-        System.out.println("Numedo de digitos: " + contador);
     }
 
 }
