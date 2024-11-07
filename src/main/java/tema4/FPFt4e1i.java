@@ -19,6 +19,7 @@ public class FPFt4e1i {
         cadenaHex = teclado.nextLine();
         int numeroDecimal = Integer.parseInt(cadenaHex, 16);
 
+        System.out.println("Tu numero es: " + cadenaHex);
         System.out.println("El número decimal es: " + numeroDecimal);
 
     }
