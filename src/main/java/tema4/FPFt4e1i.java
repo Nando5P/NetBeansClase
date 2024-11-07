@@ -5,22 +5,19 @@ import java.util.Scanner;
 public class FPFt4e1i {
 
     /*
-*Ejercicio Calculo de área
-*Fernando Parga Fernandez
-*Ejercicio 1: Realizar un programa al que se le introduzca una cadena por teclado y haga lo siguiente: 
-*h. Convertir la cadena de entrada a una variable de tipo int, suponiendo que dicha cadena 
-es un número, esto es, contiene solo dígitos decimales (del 0 a 9).
+* Ejercicio Calculo de área
+* Fernando Parga Fernandez
+* Ejercicio 1: Convertir la cadena de entrada a una variable de tipo int, suponiendo que dicha cadena 
+* es un número hexadecimal, esto es, contiene solo dígitos decimales (del 0 a 9) y letras de 
+* la A a F.
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        String cadena = new String();
-        System.out.println("Introduce texto que con el que quieras trabajar: ");
-        cadena = teclado.nextLine();
-        System.out.println("Tu frase elegida es: " + cadena);
+        String cadenaHex = "1A3F"; // Ejemplo de cadena hexadecimal
+        int numeroDecimal = Integer.parseInt(cadenaHex, 16);
 
-        int numero = Integer.parseInt(cadena);
-        System.out.println("Numero resultante: " + numero);
+        System.out.println("El número decimal es: " + numeroDecimal);
 
     }
 }
