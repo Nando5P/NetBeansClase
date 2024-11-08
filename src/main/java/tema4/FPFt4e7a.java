@@ -19,9 +19,9 @@ espacios en blanco, etc.). Hacer una segunda versión que funcione con mayúscul
         System.out.println("Escribe tu mensaje a encriptar: ");
         String mensaje = teclado.nextLine();
 
-        StringBuilder mensajeEncriptado = new StringBuilder();
+        StringBuilder mensajeEncriptado = new StringBuilder(); /* Con StingBuilder se puede modificar la cadena sin crear cadenas nuevas */
 
-        for (char c : mensaje.toCharArray()) {
+        for (char c : mensaje.toCharArray()) { /* Recorremos cada caracter del mensaje original (En cada interaccion los caracteres son asignados a c) */
             switch (c) {
                 case 'A':
                     mensajeEncriptado.append('F');
@@ -44,7 +44,7 @@ espacios en blanco, etc.). Hacer una segunda versión que funcione con mayúscul
                     case 'S':
                     mensajeEncriptado.append('Y');
                     break;
-                // Añade más sustituciones si lo necesitas
+                /* Se pueden añadir más letras */
                 default:
                     mensajeEncriptado.append(c);
                     break;
