@@ -30,7 +30,7 @@ public class FPFt4e8 {
         if (posicion < 0 || posicion >= cadena.length()) {
             System.out.println("La posición de la letra no es valida.");
         } else {
-            String nuevaCadena = cadena.substring(0, posicion) + letra + cadena.substring(posicion + 1);
+            String nuevaCadena = cadena.substring(0, posicion-1) + letra + cadena.substring(posicion + 1);
             System.out.println("Cadena resultante: " + nuevaCadena);
         }
     }
