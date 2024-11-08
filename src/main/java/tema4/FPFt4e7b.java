@@ -14,64 +14,65 @@ y muestre la cadena encriptada en (todo lo que no sean letras mayúsculas se dej
 espacios en blanco, etc.). Hacer una segunda versión que funcione con mayúsculas y minúsculas 
      */
     public static void main(String[] args) {
+     
+        /**
+         * 4.7. Un algoritmo de encriptado monoalfabético consiste en la
+         * sustitución de una letra por otra a lo largo de todo el mensaje, por
+         * ejemplo las A por F, las B por X, las C por M. Obviamente si la A
+         * pasa a ser F, ninguna otra letra pasará F. Hacer un programa que le
+         * introduzca una cadena en mayúsculas y muestre la cadena encriptada en
+         * (todo lo que no sean letras mayúsculas se deja intacto: números,
+         * espacios en blanco, etc.). Hacer una segunda versión que funcione con
+         * mayúsculas y minúsculas.
+         */
         Scanner teclado = new Scanner(System.in);
-
-        System.out.println("Escribe tu mensaje a encriptar: ");
-        String mensaje = teclado.nextLine();
-
+        String alfabeto = "ABCDEFGHIJKLMNOPQRSTUWXYZ";
+        String encriptacion = "DEFGHIJKLMNOPQRSTUVWXYZABC";
+        System.out.print("Introduce un mensaje que deseas encriptar: ");
+        String mensaje = teclado.nextLine().toUpperCase();
         StringBuilder mensajeEncriptado = new StringBuilder();
-
-        for (char i : mensaje.toCharArray()) {
-            switch (i) {
-                case 'A':
-                    mensajeEncriptado.append('F');
-                    break;
-                case 'B':
-                    mensajeEncriptado.append('X');
-                    break;
-                case 'C':
-                    mensajeEncriptado.append('M');
-                    break;
-                case 'D':
-                    mensajeEncriptado.append('Q');
-                    break;
-                case 'E':
-                    mensajeEncriptado.append('P');
-                    break;
-                case 'M':
-                    mensajeEncriptado.append('C');
-                    break;
-                case 'S':
-                    mensajeEncriptado.append('Y');
-                    break;
-                case 'a':
-                    mensajeEncriptado.append('f');
-                    break;
-                case 'b':
-                    mensajeEncriptado.append('x');
-                    break;
-                case 'c':
-                    mensajeEncriptado.append('m');
-                    break;
-                case 'd':
-                    mensajeEncriptado.append('q');
-                    break;
-                case 'e':
-                    mensajeEncriptado.append('p');
-                    break;
-                case 'm':
-                    mensajeEncriptado.append('c');
-                    break;
-                case 's':
-                    mensajeEncriptado.append('y');
-                    break;
-                // Añade más sustituciones si lo necesitas
-                default:
-                    mensajeEncriptado.append(i);
-                    break;
+        for (int i = 0; i < mensaje.length(); i++) {
+            char caracter = mensaje.charAt(i);
+            if (Character.isLetter(caracter)) {
+                int posicionLetraOriginal = alfabeto.indexOf(caracter);
+                mensajeEncriptado.append(encriptacion.charAt(posicionLetraOriginal));
+            } else {
+                mensajeEncriptado.append(caracter);
             }
         }
 
-        System.out.println("Mensaje encriptado: " + mensajeEncriptado);
+        System.out.println("El mensaje encriptado es: " + mensajeEncriptado);
+
+        //CON MAYUSCULAS Y MINUSCULAS
+        String alfabetoOriginalMayus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String alfabetoEncriptadoMayus = "FZQWODPEYVUTJSKLMXICAHNRBGT";
+
+        String alfabetoOriginalMinus = "abcdefghijklmnopqrstuvwxyz";
+        String alfabetoEncriptadoMinus = "fzwodpeyvutjsklmxicahnrbgt";
+
+        System.out.println("Introduce el texto a encriptar (puede contener mayúsculas y minúsculas): ");
+        String textoOriginal = teclado.nextLine();
+
+        StringBuilder textoEncriptado = new StringBuilder();
+
+        for (int i = 0; i < textoOriginal.length(); i++) {
+            char caracter = textoOriginal.charAt(i);
+
+            if (Character.isUpperCase(caracter)) {
+                int indice = alfabetoOriginalMayus.indexOf(caracter);
+                textoEncriptado.append(alfabetoEncriptadoMayus.charAt(indice));
+            } 
+            else if (Character.isLowerCase(caracter)) {
+                int indice = alfabetoOriginalMinus.indexOf(caracter);
+                textoEncriptado.append(alfabetoEncriptadoMinus.charAt(indice));
+            } else {
+                textoEncriptado.append(caracter);
+            }
+        }
+
+        // Mostrar el texto encriptado
+        System.out.println("El mensaje encriptado es: " + textoEncriptado.toString());
+
     }
+
 }
