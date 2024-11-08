@@ -21,8 +21,8 @@ espacios en blanco, etc.). Hacer una segunda versión que funcione con mayúscul
 
         StringBuilder mensajeEncriptado = new StringBuilder(); /* Con StingBuilder se puede modificar la cadena sin crear cadenas nuevas */
 
-        for (char c : mensaje.toCharArray()) { /* Recorremos cada caracter del mensaje original (En cada interaccion los caracteres son asignados a c) */
-            switch (c) {
+        for (char i : mensaje.toCharArray()) { /* Recorremos cada caracter del mensaje original (En cada interaccion los caracteres son asignados a c) */
+            switch (i) {
                 case 'A':
                     mensajeEncriptado.append('F');
                     break;
@@ -46,7 +46,7 @@ espacios en blanco, etc.). Hacer una segunda versión que funcione con mayúscul
                     break;
                 /* Se pueden añadir más letras */
                 default:
-                    mensajeEncriptado.append(c);
+                    mensajeEncriptado.append(i);
                     break;
             }
         }

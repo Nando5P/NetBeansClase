@@ -21,8 +21,8 @@ espacios en blanco, etc.). Hacer una segunda versión que funcione con mayúscul
 
         StringBuilder mensajeEncriptado = new StringBuilder();
 
-        for (char c : mensaje.toCharArray()) {
-            switch (c) {
+        for (char i : mensaje.toCharArray()) {
+            switch (i) {
                 case 'A':
                     mensajeEncriptado.append('F');
                     break;
@@ -67,7 +67,7 @@ espacios en blanco, etc.). Hacer una segunda versión que funcione con mayúscul
                     break;
                 // Añade más sustituciones si lo necesitas
                 default:
-                    mensajeEncriptado.append(c);
+                    mensajeEncriptado.append(i);
                     break;
             }
         }

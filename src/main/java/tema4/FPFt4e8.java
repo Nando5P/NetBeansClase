@@ -1,0 +1,37 @@
+package tema4;
+
+import java.awt.BorderLayout;
+import java.util.Scanner;
+
+public class FPFt4e8 {
+
+    /*
+* Ejercicio Calculo de área
+* Fernando Parga Fernandez
+* Ejercicio 8: Realizar un programa que solicite una cadena, un número que indica una posición de la 
+* cadena y una letra. El programa reemplazará sobre la misma cadena, el carácter que hubiera en la 
+* posición indicada por la letra introducida. Hacer dos versiones, la primera con String y otra con 
+* StringBuilder.
+     */
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Escribe tu mensaje a encriptar: ");
+        String cadena = teclado.nextLine();
+
+        System.out.println("Introduce numero de posicion que quieres cambiar: ");
+        int posicion = teclado.nextInt();
+
+        System.out.println("Introduce el nuevo caracter: ");
+        char letra = teclado.next().charAt(0);
+
+        String cadena2 = cadena.substring(posicion);
+
+        if (posicion < 0 || posicion >= cadena.length()) {
+            System.out.println("La posición de la letra no es valida.");
+        } else {
+            String nuevaCadena = cadena.substring(0, posicion) + letra + cadena.substring(posicion + 1);
+            System.out.println("Cadena resultante: " + nuevaCadena);
+        }
+    }
+}
