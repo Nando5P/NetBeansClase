@@ -23,13 +23,13 @@ public class FPFt05e01C {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        double num1, num2, num3;
+        long num1, num2;
 
         System.out.println("Introduce dos numeros: ");
         System.out.println("Primero: ");
-        num1 = teclado.nextDouble();
+        num1 = teclado.nextLong();
         System.out.println("Segundo: ");
-        num2 = teclado.nextDouble();
+        num2 = teclado.nextLong();
 
         
         
