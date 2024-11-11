@@ -2,12 +2,12 @@ package tema5;
 
 import java.util.Scanner;
 
-public class FPFt05e01C {
+public class FPFt05e01E {
 
     /*
 * Ejercicio Calculo de área
 * Fernando Parga Fernandez
-* Ejercicio 1C: Realizar funciones que realicen los siguientes supuestos, y un main() desde el que se llame a 
+* Ejercicio 1E: Realizar funciones que realicen los siguientes supuestos, y un main() desde el que se llame a 
 * dichas funciones: 
 * • Función llamada par() que se le pasa un entero y devuelve true si es par, false si no lo 
 * es. 
@@ -23,29 +23,25 @@ public class FPFt05e01C {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        long num1, num2;
+        int num1, num2;
 
-        System.out.println("Introduce dos numeros: ");
+        System.out.println("Introduce dos numeros enteros: ");
         System.out.println("Primero: ");
-        num1 = teclado.nextLong();
+        num1 = teclado.nextInt();
         System.out.println("Segundo: ");
-        num2 = teclado.nextLong();
+        num2 = teclado.nextInt();
 
-        long resultado = sumaIntervalo(num1, num2);
-        System.out.println("La suma es: " + resultado);
+        int numAleatorio = aleatorio(num1, num2);
+        System.out.println("Numero aleatorio: " + numAleatorio);
     }
 
-    public static long sumaIntervalo(long num1, long num2) {
+    public static int aleatorio(int num1, int num2) {
 
         if (num1 >= 0 && num2 >= 0 && num1 < num2) {
-            long suma = 0;
-            for (long i = num1 + 1; i < num2; i++) {
-                suma += i;
-            }return suma;
+            return (int) (Math.random() * (num2 - num1 + 1) + num1);
 
         } else {
             return -1;
         }
-        
     }
 }

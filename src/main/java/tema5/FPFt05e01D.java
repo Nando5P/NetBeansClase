@@ -2,12 +2,12 @@ package tema5;
 
 import java.util.Scanner;
 
-public class FPFt05e01C {
+public class FPFt05e01D {
 
     /*
 * Ejercicio Calculo de área
 * Fernando Parga Fernandez
-* Ejercicio 1C: Realizar funciones que realicen los siguientes supuestos, y un main() desde el que se llame a 
+* Ejercicio 1D: Realizar funciones que realicen los siguientes supuestos, y un main() desde el que se llame a 
 * dichas funciones: 
 * • Función llamada par() que se le pasa un entero y devuelve true si es par, false si no lo 
 * es. 
@@ -23,29 +23,22 @@ public class FPFt05e01C {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        long num1, num2;
+        
+        System.out.println("Introduce una cadena para contar ceros (0): ");
+        String cadena = teclado.next();
 
-        System.out.println("Introduce dos numeros: ");
-        System.out.println("Primero: ");
-        num1 = teclado.nextLong();
-        System.out.println("Segundo: ");
-        num2 = teclado.nextLong();
-
-        long resultado = sumaIntervalo(num1, num2);
-        System.out.println("La suma es: " + resultado);
+        int cantidadCeros = contarCeros(cadena);
+        System.out.println("La suma de ceros es: " + cantidadCeros);
     }
 
-    public static long sumaIntervalo(long num1, long num2) {
+    public static int contarCeros(String cadena) {
 
-        if (num1 >= 0 && num2 >= 0 && num1 < num2) {
-            long suma = 0;
-            for (long i = num1 + 1; i < num2; i++) {
-                suma += i;
-            }return suma;
-
-        } else {
-            return -1;
+        int contador = 0;
+        for (int i = 0; i < cadena.length(); i++) {
+            if (cadena.charAt(i) == '0') {
+                contador++;
+            }
         }
-        
+        return contador;
     }
 }
