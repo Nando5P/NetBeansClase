@@ -29,11 +29,11 @@ adicional
         
         double precio = calcularCoste(peso, distancia);
         
-        System.out.println("Debera abonar la cantidad de: " + precio + " euros");
+        System.out.println("Debera abonar la cantidad de: " + String.format("%.2f", precio) + " euros");
     }
 
     public static double calcularCoste(double peso, double distancia) {
-      double costePeso = 6;
+      double costePeso =6;
       double  costeDistancia = 4.2;
 
         if (peso >= 5) {
@@ -48,7 +48,7 @@ adicional
         if (distancia <= 6) {
             costeDistancia = 4.2;
         } else {
-            for (int j = 6; j <= distancia; j++) {
+            for (int j = 7; j <= distancia; j++) {
                 costeDistancia += 1.4;
             }
             
