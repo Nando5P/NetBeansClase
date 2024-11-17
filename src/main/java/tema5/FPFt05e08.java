@@ -6,7 +6,7 @@ public class FPFt05e08 {
 
     /*
 * Fernando Parga Fernandez
-* Ejercicio 6: Un número primo es aquel que solo tiene como divisores el número 1 y a él mismo. Usando 
+* Ejercicio 8: Un número primo es aquel que solo tiene como divisores el número 1 y a él mismo. Usando 
 la función del programa anterior, haz un programa que muestre la suma de los números primos 
 comprendidos entre 1 y 1000. 
      */
