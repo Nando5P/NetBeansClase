@@ -26,28 +26,20 @@ que se hagan menos llamadas recursivas. Por ejemplo, 2 * 4 es igual a 4 * 2.
         System.out.println("Numero 2: ");
         num2 = teclado.nextInt();
 
-        int resultado = Optimizar(num1, num2);
-        System.out.println(num1 + " * " + num2 + " = " + resultado);
         
+        System.out.println(num1 + " * " + num2 + " = " + multiplicar(num1, num2));
+
     }
 
     public static int multiplicar(int a, int b) {
 
-        if (b == 0) {
-            return a;
-        } else {
-            return a + multiplicar(a, (b - 1));
+        if (a < b) {
+            return multiplicar(b, a);
         }
-        
+        if (b == 1) {
+            return a;
+        }
+        return multiplicar(a, b - 1);
     }
 
-    public static int Optimizar(int a, int b){
-    
-        if (a < b){
-        return multiplicar(b, a);
-        } else  {
-        return multiplicar(a, b);
-        }
-        
-    }
 }
