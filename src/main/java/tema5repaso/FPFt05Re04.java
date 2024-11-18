@@ -39,7 +39,7 @@ que se hagan menos llamadas recursivas. Por ejemplo, 2 * 4 es igual a 4 * 2.
         if (b == 1) {
             return a;
         }
-        return multiplicar(a, b - 1);
+        return a + multiplicar(a, b - 1);
     }
 
 }
