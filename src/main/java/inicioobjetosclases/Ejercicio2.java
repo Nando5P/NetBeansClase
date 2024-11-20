@@ -47,9 +47,9 @@ public class Ejercicio2 {
         System.out.println("Introduce saldo en la cuenta2: ");
         cuenta2.setSaldo(teclado.nextDouble());
         System.out.println("Cantidad a ingresar: ");
-        ingreso = teclado.nextDouble();
+        sumar = teclado.nextDouble();
         System.out.println("Cantidad a retirar: ");
-        double restar = teclado.nextDouble();
+        restar = teclado.nextDouble();
        
         System.out.println(cuenta1.toString());
         System.out.println(cuenta2.toString());
