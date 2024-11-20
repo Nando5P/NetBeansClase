@@ -51,8 +51,24 @@ public class InicioObjetosClases {
         System.out.println("Introduce numero de paginas del libro2: ");
         libro2.setNumPaginas(teclado.nextInt());
 
+      /*
+        do {
+            Libro libro = new Libro();
+            
+            System.out.println("Introduce titulo del libro2: ");
+            libro.setTitulo(teclado.nextLine());
+            System.out.println("Introduce ISBN del libro2: ");
+            libro.setISBN(teclado.nextLine());
+            System.out.println("Introduce autor del libro2: ");
+            libro.setAutor(teclado.nextLine());
+            System.out.println("Introduce numero de paginas del libro2: ");
+            libro.setNumPaginas(teclado.nextInt());
+            
+        } while (respuesta !=0);
+        */
+
         System.out.println("Total de libros guardados: " + Libro.contadorLibros);
-        
+
         System.out.println(libro1.toString());
         System.out.println(libro2.toString());
 
