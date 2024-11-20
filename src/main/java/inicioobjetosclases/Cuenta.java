@@ -8,10 +8,10 @@ public class Cuenta {
     private double saldo;
     private String Iban;
 
-    public Cuenta(){
+    public Cuenta() {
         this.Iban = generarIban();
     }
-    
+
     public Cuenta(String titular) {
         this.titular = titular;
         this.saldo = 0.0;
@@ -29,7 +29,7 @@ public class Cuenta {
         StringBuilder numeros = new StringBuilder();
         Random random = new Random();
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 5; i++) {
             int numero = random.nextInt(10); // Genera un número entre 0 y 9
             numeros.append(numero);
         }
@@ -53,8 +53,13 @@ public class Cuenta {
         this.saldo = saldo;
     }
 
+    public String getIban() {
+        return generarIban();
+    }
+
+
     public String toString() {
-        return "Cuenta{" + "titular=" + titular + ", saldo=" + saldo + ", Iban=" + Iban + '}';
+        return "Cuenta{" + "titular=" + titular + ", saldo=" + saldo + '}';
     }
 
 }

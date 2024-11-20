@@ -44,7 +44,7 @@ public class Ejercicio2 {
         double restar1 = teclado.nextDouble();
 
         double SaldoFin1 = ingresar(cuenta1.getSaldo(), sumar1);
-        String IBAN1 = generariBan();
+        String IBAN1 = cuenta1.getIban();
 
         System.out.println("Introduce titular de la cuenta2: ");
         cuenta2.setTitular(teclado.next());
@@ -56,7 +56,7 @@ public class Ejercicio2 {
         double restar2 = teclado.nextDouble();
 
         double SaldoFin2 = retirar(cuenta2.getSaldo(), restar2);
-        String IBAN2 = generariBan();
+        String IBAN2 = cuenta2.getIban();
 
         System.out.println(cuenta1.toString());
         System.out.println("El saldo final de la cuenta1 es: " + SaldoFin1);
@@ -84,18 +84,4 @@ public class Ejercicio2 {
             return saldo;
         }
     }
-
-    private static String generariBan() {
-
-        StringBuilder numeros = new StringBuilder();
-        Random random = new Random();
-
-        for (int i = 0; i < 5; i++) {
-            int numero = random.nextInt(10); // Genera un número entre 0 y 9
-            numeros.append(numero);
-        }
-
-        return "Es" + numeros.toString();
-    }
-
 }
