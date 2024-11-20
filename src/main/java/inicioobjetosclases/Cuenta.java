@@ -59,7 +59,8 @@ public class Cuenta {
 
 
     public String toString() {
-        return "Cuenta{" + "titular=" + titular + ", saldo=" + saldo + '}';
+        return "Cuenta: "
+                + "titular= " + titular + ", saldo= " + saldo;
     }
 
 }

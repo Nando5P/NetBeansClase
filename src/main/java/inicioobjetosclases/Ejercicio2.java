@@ -1,6 +1,5 @@
 package inicioobjetosclases;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -39,23 +38,19 @@ public class Ejercicio2 {
         System.out.println("Introduce saldo en la cuenta1: ");
         cuenta1.setSaldo(teclado.nextDouble());
         System.out.println("Cantidad a ingresar: ");
-        double sumar1 = teclado.nextDouble();
-        System.out.println("Cantidad a retirar: ");
-        double restar1 = teclado.nextDouble();
+        double sumar = teclado.nextDouble();
 
-        double SaldoFin1 = ingresar(cuenta1.getSaldo(), sumar1);
+        double SaldoFin1 = ingresar(cuenta1.getSaldo(), sumar);
         String IBAN1 = cuenta1.getIban();
 
         System.out.println("Introduce titular de la cuenta2: ");
         cuenta2.setTitular(teclado.next());
         System.out.println("Introduce saldo en la cuenta2: ");
         cuenta2.setSaldo(teclado.nextDouble());
-        System.out.println("Cantidad a ingresar: ");
-        double sumar2 = teclado.nextDouble();
         System.out.println("Cantidad a retirar: ");
-        double restar2 = teclado.nextDouble();
+        double restar = teclado.nextDouble();
 
-        double SaldoFin2 = retirar(cuenta2.getSaldo(), restar2);
+        double SaldoFin2 = retirar(cuenta2.getSaldo(), restar);
         String IBAN2 = cuenta2.getIban();
 
         System.out.println(cuenta1.toString());
