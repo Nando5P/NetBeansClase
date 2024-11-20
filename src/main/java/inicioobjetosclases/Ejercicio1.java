@@ -26,7 +26,7 @@ clase Libro.
 Por último, indicar cuál de los 2 tiene más páginas.
 
  */
-public class InicioObjetosClases {
+public class Ejercicio1 {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
