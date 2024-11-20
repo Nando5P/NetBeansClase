@@ -37,16 +37,40 @@ public class Ejercicio2 {
         cuenta1.setTitular (teclado.next());
         System.out.println("Introduce saldo en la cuenta1: ");
         cuenta1.setSaldo(teclado.nextDouble());
+        System.out.println("Cantidad a ingresar: ");
+        double sumar = teclado.nextDouble();
+        System.out.println("Cantidad a retirar: ");
+        double restar = teclado.nextDouble();
 
         System.out.println("Introduce titular de la cuenta2: ");
         cuenta2.setTitular(teclado.next());
         System.out.println("Introduce saldo en la cuenta2: ");
         cuenta2.setSaldo(teclado.nextDouble());
-        
-
+        System.out.println("Cantidad a ingresar: ");
+        ingreso = teclado.nextDouble();
+        System.out.println("Cantidad a retirar: ");
+        double restar = teclado.nextDouble();
+       
         System.out.println(cuenta1.toString());
         System.out.println(cuenta2.toString());
 
         
     }
+    
+    public double ingresar (double saldo, double sumar){
+        if (sumar > 0) {
+            return (sumar + saldo);
+        } else {
+            return saldo;
+        }
+    }
+    
+    public double retirar (double saldo, double restar){
+        if (restar < saldo) {
+            return (saldo - restar);
+        } else {
+            return saldo;
+        }
+    }
+    
 }
