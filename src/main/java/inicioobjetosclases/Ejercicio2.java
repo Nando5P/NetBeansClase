@@ -1,6 +1,5 @@
 package inicioobjetosclases;
 
-import java.lang.reflect.Array;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -55,7 +54,7 @@ public class Ejercicio2 {
         double sumar2 = teclado.nextDouble();
         System.out.println("Cantidad a retirar: ");
         double restar2 = teclado.nextDouble();
-        
+
         double SaldoFin2 = retirar(cuenta2.getSaldo(), restar2);
         String IBAN2 = generariBan();
 
@@ -79,7 +78,7 @@ public class Ejercicio2 {
     }
 
     public static double retirar(double saldo, double restar) {
-        if (restar < saldo) {
+        if (restar <= saldo) {
             return (saldo - restar);
         } else {
             return saldo;
