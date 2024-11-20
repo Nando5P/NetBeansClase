@@ -65,6 +65,8 @@ public class Ejercicio1 {
             libro.setNumPaginas(teclado.nextInt());
             
         } while (respuesta !=0);
+        
+        Para esto serian necesarios arrays
         */
 
         System.out.println("Total de libros guardados: " + Libro.contadorLibros);
