@@ -1,5 +1,7 @@
 package inicioobjetosclases;
 
+import java.lang.reflect.Array;
+import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -34,43 +36,67 @@ public class Ejercicio2 {
         Cuenta cuenta2 = new Cuenta();
 
         System.out.println("Introduce titular de la cuenta1: ");
-        cuenta1.setTitular (teclado.next());
+        cuenta1.setTitular(teclado.next());
         System.out.println("Introduce saldo en la cuenta1: ");
         cuenta1.setSaldo(teclado.nextDouble());
         System.out.println("Cantidad a ingresar: ");
-        double sumar = teclado.nextDouble();
+        double sumar1 = teclado.nextDouble();
         System.out.println("Cantidad a retirar: ");
-        double restar = teclado.nextDouble();
+        double restar1 = teclado.nextDouble();
+
+        double SaldoFin1 = ingresar(cuenta1.getSaldo(), sumar1);
+        String IBAN1 = generariBan();
 
         System.out.println("Introduce titular de la cuenta2: ");
         cuenta2.setTitular(teclado.next());
         System.out.println("Introduce saldo en la cuenta2: ");
         cuenta2.setSaldo(teclado.nextDouble());
         System.out.println("Cantidad a ingresar: ");
-        sumar = teclado.nextDouble();
+        double sumar2 = teclado.nextDouble();
         System.out.println("Cantidad a retirar: ");
-        restar = teclado.nextDouble();
-       
-        System.out.println(cuenta1.toString());
-        System.out.println(cuenta2.toString());
-
+        double restar2 = teclado.nextDouble();
         
+        double SaldoFin2 = retirar(cuenta2.getSaldo(), restar2);
+        String IBAN2 = generariBan();
+
+        System.out.println(cuenta1.toString());
+        System.out.println("El saldo final de la cuenta1 es: " + SaldoFin1);
+        System.out.println("Y su IBAN es: " + IBAN1);
+        System.out.println("");
+        System.out.println(cuenta2.toString());
+        System.out.println("El saldo final de la cuenta1 es: " + SaldoFin2);
+        System.out.println("Y su IBAN es: " + IBAN2);
+        System.out.println("");
+
     }
-    
-    public double ingresar (double saldo, double sumar){
+
+    public static double ingresar(double saldo, double sumar) {
         if (sumar > 0) {
             return (sumar + saldo);
         } else {
             return saldo;
         }
     }
-    
-    public double retirar (double saldo, double restar){
+
+    public static double retirar(double saldo, double restar) {
         if (restar < saldo) {
             return (saldo - restar);
         } else {
             return saldo;
         }
     }
-    
+
+    private static String generariBan() {
+
+        StringBuilder numeros = new StringBuilder();
+        Random random = new Random();
+
+        for (int i = 0; i < 5; i++) {
+            int numero = random.nextInt(10); // Genera un número entre 0 y 9
+            numeros.append(numero);
+        }
+
+        return "Es" + numeros.toString();
+    }
+
 }
