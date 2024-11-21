@@ -34,7 +34,7 @@ public class Cuenta {
             numeros.append(numero);
         }
 
-        return "Es" + numeros.toString();
+        return "Es24 " + numeros.toString();
     }
 
     public String getTitular() {

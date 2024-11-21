@@ -60,8 +60,6 @@ public class Ejercicio2 {
         System.out.println(cuenta2.toString());
         System.out.println("El saldo final de la cuenta1 es: " + SaldoFin2);
         System.out.println("Y su IBAN es: " + IBAN2);
-        System.out.println(" ");
-
     }
 
     public static double ingresar(double saldo, double sumar) {
