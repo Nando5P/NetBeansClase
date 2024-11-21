@@ -72,9 +72,10 @@ public class Ejercicio1 {
         System.out.println("Total de libros guardados: " + Libro.contadorLibros);
 
         System.out.println(libro1.toString());
+        System.out.println("");
         System.out.println(libro2.toString());
 
-        System.out.println("Numero de Libros creados: " + Libro.contadorLibros);
+        
 
         if (libro1.getNumPaginas() > libro2.getNumPaginas()) {
             System.out.println("El libro con mas paginas es: " + libro1.getTitulo());

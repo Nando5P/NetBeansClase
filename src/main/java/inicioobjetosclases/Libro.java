@@ -59,7 +59,7 @@ public class Libro {
     }
 
     public String toString() {
-        return "El libro cpn ISBN " + ISBN + " creado por " + autor + " y de nombre " + titulo + " tiene " + numPaginas + "paginas";
+        return "El libro con ISBN " + ISBN + " creado por " + autor + " y de nombre " + titulo + " tiene " + numPaginas + "paginas";
     }
 
 }
