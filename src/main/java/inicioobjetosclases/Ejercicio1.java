@@ -42,6 +42,8 @@ public class Ejercicio1 {
         System.out.println("Introduce numero de paginas del libro1: ");
         libro1.setNumPaginas(teclado.nextInt());
 
+        teclado.nextLine(); //Evita bug de teclado.nextInt();
+        
         System.out.println("Introduce titulo del libro2: ");
         libro2.setTitulo(teclado.nextLine());
         System.out.println("Introduce ISBN del libro2: ");

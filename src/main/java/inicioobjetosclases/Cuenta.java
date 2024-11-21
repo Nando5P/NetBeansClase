@@ -29,7 +29,7 @@ public class Cuenta {
         StringBuilder numeros = new StringBuilder();
         Random random = new Random();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 20; i++) {
             int numero = random.nextInt(10); // Genera un número entre 0 y 9
             numeros.append(numero);
         }
