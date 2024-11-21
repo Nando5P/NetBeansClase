@@ -74,16 +74,11 @@ public class Ejercicio3 {
         persona2.setGenero(teclado.next().toUpperCase().charAt(0));
         estadoPeso = pesoPersona(persona2.calcularIMC());
 
-        System.out.println(persona1.toString());
+        System.out.println(persona2.toString());
         System.out.println(estadoPeso);
         System.out.println("Es mayor de edad = " + persona2.esMayorDeEdad());
 
         System.out.println("La persona3 se generara por defecto.");
-        persona3.setNombre("Persona3");
-        persona3.setEdad(30);
-        persona3.setGenero('M');
-        persona3.setPeso(55);
-        persona3.setAltura(1.60);
         estadoPeso = pesoPersona(persona3.calcularIMC());
 
         System.out.println(persona1.toString());
