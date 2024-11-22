@@ -58,40 +58,13 @@ public class Prenda {
     }
     }
 
-    public static int getReferencia() {
-        return generarReferencia();
-    }
-
-    public static double getPrecioSinIva() {
-        return precioSinIva;
-    }
-
-    public static void setPrecioSinIva(double precioSinIva) {
-        Prenda.precioSinIva = precioSinIva;
-    }
-
-    public static double getIva() {
-        return iva;
-    }
-
-    public static void setIva(double iva) {
-        Prenda.iva = iva;
-    }
-
-    public static double getTalla() {
-        return talla;
-    }
-
-    public static void setTalla(double talla) {
-        Prenda.talla = talla;
-    }
-
-    public static char getSexo() {
-        return sexo;
-    }
-
-    public static void setSexo(char sexo) {
-        Prenda.sexo = sexo;
+    public String toString(){
+    return "Prenda {"
+            +"tipo='" + tipo + '\''
+            +", talla= " + talla
+            + ", sexo= " + sexo
+            + ", precio sin iva= " + precioSinIva
+            + ", iva= "
     }
 
  
