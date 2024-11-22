@@ -81,7 +81,7 @@ public class Ejercicio3 {
         System.out.println("La persona3 se generara por defecto.");
         estadoPeso = pesoPersona(persona3.calcularIMC());
 
-        System.out.println(persona1.toString());
+        System.out.println(persona3.toString());
         System.out.println(estadoPeso);
         System.out.println("Es mayor de edad = " + persona3.esMayorDeEdad());
     }

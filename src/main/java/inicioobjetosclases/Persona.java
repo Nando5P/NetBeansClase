@@ -20,7 +20,7 @@ public class Persona {
     private String dni;
 
     public Persona() {
-        this.nombre = "nombre";
+        this.nombre = "Antonio";
         this.edad = 0;
         this.dni = generarDNI();
         this.genero = hombre;
