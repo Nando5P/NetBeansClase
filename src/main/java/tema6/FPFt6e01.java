@@ -27,8 +27,19 @@ public class FPFt6e01 {
         Scanner teclado = new Scanner(System.in);
         MovilPrepago movil1 = new MovilPrepago(900900900L, 0.1f, 0.5f, 10f);
 
-        
-        System.out.println("Su telefono es: " + movil1.getSaldo());
-        
+        System.out.println("Indique su numero de telefono: ");
+        movil1.setNumeroMovil(teclado.nextLong());
+        System.out.println(movil1.toString());
+        System.out.println("Quiere hacer alguna recarga? (S/N)");
+        char respuesta = teclado.next().charAt(0);
+        if (respuesta == 's' || respuesta == 'S') {
+            System.out.println("Introduce cantidad a recargar: (solo se aceptan multiplos de 5)");
+            boolean importe = movil1.recargar(teclado.nextInt());
+        }
+        System.out.println("Saldo actual: " + movil1.consultarSaldo());
+        System.out.println("Se realizara una llamada de 30 segundos");
+        movil1.efectuarLlamada(30);
+        System.out.println("Saldo actual: " + movil1.consultarSaldo());
+
     }
 }
