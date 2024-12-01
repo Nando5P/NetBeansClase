@@ -39,14 +39,17 @@ public class FPFt6e02 {
                     System.out.println("Elegiste opción 2 (Recargar)");
                     System.out.println("Introduce cantidad a recargar: (solo se aceptan multiplos de 5)");
                     boolean importe = movil.recargar(teclado.nextInt());
+                    System.out.println("Nuevo saldo: " + movil.getSaldo());
                     break;
                 case 3:
                     System.out.println("Elegiste opción 3 (Realizar una llamada)");
-                    System.out.println("Se realizara una llamada. Establece duracion:");
+                    System.out.println("Se realizara una llamada. Establece duracion en segundos: ");
                     movil.efectuarLlamada(teclado.nextInt());
                     break;
                 case 4:
                     System.out.println("Elegiste opción 4 (Navegar por internet");
+                    System.out.println("Cuantos megas ha consumido? ");
+                    movil.navegar(teclado.nextInt());
                     break;
                 case 0:
                     salir = true;
@@ -60,7 +63,7 @@ public class FPFt6e02 {
     private static int pintarMenu() {
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("\n\n\n");
+        System.out.println("\n");
         System.out.println("Elija una opción:");
         System.out.println("1 Consultar Saldo");
         System.out.println("2 Recargar");
