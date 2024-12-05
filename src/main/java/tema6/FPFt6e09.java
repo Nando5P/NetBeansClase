@@ -30,9 +30,7 @@ import java.util.HashMap;
 public class FPFt6e09 {
 
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in); 
-        
-
+        Scanner teclado = new Scanner(System.in);
 //a)Comparar Nacimiento
     System.out.println("COMPARAR EL TIEMPO QUE HA PASADO DESDE FECHA DE NACIMIENTO");
         System.out.println("Introduce tu fecha de nacimiento (yyyy-mm-dd):");

@@ -37,9 +37,12 @@ public class FPFt6e01 {
             boolean importe = movil1.recargar(teclado.nextInt());
         }
         System.out.println("Saldo actual: " + movil1.consultarSaldo());
-        System.out.println("Se realizara una llamada de 30 segundos");
-        movil1.efectuarLlamada(30);
+        System.out.println("Se realizara una llamada");
+        System.out.println("Indique su duracion: ");
+        movil1.efectuarLlamada(teclado.nextInt());
         System.out.println("Saldo actual: " + movil1.consultarSaldo());
-
+        System.out.println("Naveguemos por internet: (indica los megas gastados)");
+        movil1.navegar(teclado.nextInt());
+        System.out.println("Saldo actual: " + movil1.consultarSaldo());
     }
 }
