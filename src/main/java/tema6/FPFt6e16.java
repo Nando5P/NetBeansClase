@@ -19,6 +19,7 @@ import java.util.Scanner;
 * reglas descritas. 
 * Hacer un main() que cree un tablero, un ratón y un gato y alterne los movimientos de los dos últimos.
 */
+
 public class FPFt6e16 {
 
     public static void main(String[] args) {
